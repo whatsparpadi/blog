@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <!-- Grid View (Pinterest Style) -->
+        <section id="grid-view" class="container">
+            <header class="site-header">
+                <a href="https://instagram.com" target="_blank" class="instagram-btn" aria-label="Instagram Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">☀️</button>
+                <h1>Visual Stories</h1>
+                <p>A collection of thoughts and moments.</p>
+
+                <nav class="category-nav">
+                    <button class="filter-btn active" onclick="filterPosts('All')">All</button>
+                    <button class="filter-btn" onclick="filterPosts('Food')">Food</button>
+                    <button class="filter-btn" onclick="filterPosts('Tech')">Tech</button>
+                    <button class="filter-btn" onclick="filterPosts('People')">People</button>
+                </nav>
+            </header>
+
+            <div id="blog-grid" class="masonry-grid">
+                <!-- Blog cards will be injected here by JS -->
+            </div>
+        </section>
+
+        <!-- Post View (Hidden by default) -->
+        <section id="post-view" class="container hidden">
+            <button id="back-btn" class="back-btn" onclick="goHome()">
+                &larr; Back to Home
+            </button>
+
+            <article class="blog-post">
+                <div class="post-header">
+                    <h1 id="post-title">Blog Post Title</h1>
+                </div>
+                <img id="post-image" src="" alt="Blog Cover" class="post-hero-image">
+                <div id="post-content" class="post-body">
+                    <!-- Full content goes here -->
+                </div>
+            </article>
+        </section>
+
+        <!-- Admin View (Hidden by default) -->
+        <section id="admin-view" class="container hidden">
+            <button class="back-btn" onclick="goHome()">
+                &larr; Back to Home
+            </button>
+
+            <article class="blog-post">
+                <div class="post-header">
+                    <h1>About the Admin</h1>
+                </div>
+                <div class="post-body">
+                    <p>Hi, I'm <strong>Pranav</strong>.</p>
+                    <p>Welcome to my collection of visual stories. I'm passionate about technology, minimalism, and good
+                        food.</p>
+                    <p>This blog is a static site built with pure HTML, CSS, and JavaScript. No databases, no
+                        frameworks, just code.</p>
+
+                    <div style="margin-top: 20px;">
+                        <a href="assets/resume.pdf" download class="resume-btn">Download Resume</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Created and managed by <a href="#" onclick="showAdmin(); return false;">Pranav</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
