@@ -160,6 +160,9 @@ function showPost(id) {
     adminView.classList.add('hidden');
     postView.classList.remove('hidden');
 
+    // Update Meta Tags for Social Sharing
+    updateMetaTags(post.title, post.shortDesc, post.image, `https://www.whatsparpadi.in/#post-${post.id}`);
+
     // Scroll to top
     window.scrollTo(0, 0);
 }
@@ -177,7 +180,32 @@ function goHome() {
     postView.classList.add('hidden');
     adminView.classList.add('hidden');
     gridView.classList.remove('hidden');
+
+    // Reset Meta Tags to Default
+    updateMetaTags(
+        "What's Parpadi?",
+        "suggestions for real-life decisions",
+        "https://www.whatsparpadi.in/assets/preview.jpg",
+        "https://www.whatsparpadi.in/"
+    );
+
     window.scrollTo(0, 0);
+}
+
+// Helper to update Meta Tags
+function updateMetaTags(title, desc, image, url) {
+    document.title = title;
+
+    // Open Graph
+    document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', desc);
+    document.querySelector('meta[property="og:image"]').setAttribute('content', image);
+    document.querySelector('meta[property="og:url"]').setAttribute('content', url);
+
+    // Twitter
+    document.querySelector('meta[name="twitter:title"]').setAttribute('content', title);
+    document.querySelector('meta[name="twitter:description"]').setAttribute('content', desc);
+    document.querySelector('meta[name="twitter:image"]').setAttribute('content', image);
 }
 
 // Simple Markdown Parser (Regex Based)
