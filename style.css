@@ -749,3 +749,46 @@ body.dark-mode .scroll-top-btn {
     background-color: #fff;
     color: #000;
 }
+
+/* Mobile Header Fix */
+@media (max-width: 768px) {
+    .site-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .instagram-btn,
+    .theme-btn {
+        position: static;
+        /* Reset absolute positioning */
+        transform: none;
+        margin: 0;
+    }
+
+    .site-header h1 {
+        width: 100%;
+        /* Force new line */
+        order: 1;
+        /* Move below buttons */
+        margin-top: 10px;
+        font-size: 2rem;
+        /* Smaller font */
+    }
+
+    .site-header p {
+        width: 100%;
+        order: 2;
+    }
+
+    .category-nav {
+        width: 100%;
+        order: 3;
+    }
+
+    /* Adjust hover to not rotate/move too much to avoid layout shift if needed, 
+       but keeping scale is fine usually unless it causes overflow. */
+}
