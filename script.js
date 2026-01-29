@@ -123,9 +123,8 @@ const themeToggle = document.getElementById('theme-toggle');
 // Theme Logic
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
         themeToggle.textContent = '🌙';
     } else {
@@ -183,7 +182,7 @@ function renderGrid(filterCategory) {
 
         card.innerHTML = `
             <div class="card-image-wrapper">
-                <img src="${post.image}" alt="${post.title}" class="card-image ${sizeClass}">
+                <img src="${post.image}" alt="${post.title}" class="card-image ${sizeClass}" loading="lazy">
                 <div class="card-overlay">
                     <h2 class="card-title">${post.title}</h2>
                     <p class="card-desc">
