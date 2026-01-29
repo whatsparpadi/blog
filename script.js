@@ -84,7 +84,7 @@ To add the map:
 
 1.  Go to **Google Maps** and find your shop in Pachalam.
 2.  Click **Share > Embed a Map**.
-3.  Copy the HTML code (it starts with \`<iframe\`).
+3.  Copy the HTML code.
 4.  Paste this code into your \`index.html\` where you want the map to appear.
 
 ### 9. Add a Contact Form (The Smart Way)
