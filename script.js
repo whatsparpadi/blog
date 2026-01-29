@@ -105,6 +105,44 @@ Now your website will be live!
 And that's it! You have a business website running.
         `,
         date: "2026-01-29"
+    },
+    {
+        id: 2,
+        title: "Top 3 Gaming Platforms for Free Giveaways",
+        category: "Tech",
+        shortDesc: "A guide to the best platforms for scoring free games, featuring Epic Games Store, Steam, and Amazon Prime Gaming.",
+        image: "assets/gaming_giveaways.png",
+        content: `
+## Top 3 Platforms for Free Game Giveaways
+
+Who doesn't love free games? Here are the top platforms that distribute free games to users.
+
+### 1. Epic Games Store
+
+Number 1 on this list is the **Epic Games Store**. They are known for giving away games on a weekly basis—every single week!
+
+*   **Why they do it:** Mainly to attract new users to their platform and to create traction for existing game developers who have new projects coming up. It's a great way to promote future games.
+*   **What you get:** Usually small indie games or non-AAA titles on regular weeks. However, during holidays, they often drop massive **AAA titles** for free.
+
+### 2. Steam
+
+Number 2 is the giant, **Steam**. Here, the freebies work a bit differently.
+
+*   **How it works:** Game publishers themselves decide when to put their games up for free.
+*   **The Goal:** Often, they do this to collect feedback from users or gamers.
+*   **The Catch:** Most games on the giveaway list are indie games, but they are great for discovering hidden gems.
+
+### 3. Amazon Prime Gaming
+
+Number 3 is a real gem, especially in India: **Amazon Prime Gaming** (also associated with Amazon Luna).
+
+*   **The Value:** The Amazon Prime subscription is really cheap in India. Most people think it's just for shopping, music, or video, but there is a whole gaming side to it too!
+*   **What you get:** They give away games on a monthly basis, often including **1 or 2 AAA titles** every month.
+*   **How to claim:** You can claim these free games if you have a Prime membership. Since Amazon doesn't have a huge standalone launcher popularity yet, they often give you codes to redeem on other platforms like **Epic Games Store**, **GOG** (controlled by CD Projekt Red), **Microsoft Xbox**, and **Amazon Games**.
+
+It's a fantastic perk that many subscribers overlook!
+        `,
+        date: "2026-01-29"
     }
 ];
 
@@ -144,8 +182,15 @@ themeToggle.addEventListener('click', () => {
 function init() {
     initTheme();
 
-    // Sort logs by date (newest first)
-    BLOG_POSTS.sort((a, b) => new Date(b.date) - new Date(a.date));
+    // Sort logs by date (newest first), if same date, sort by ID (highest first)
+    BLOG_POSTS.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        if (dateB - dateA !== 0) {
+            return dateB - dateA;
+        }
+        return b.id - a.id;
+    });
 
     renderGrid('All');
 }
