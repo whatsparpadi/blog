@@ -1,6 +1,61 @@
 // Data - 3 Example Blog Posts
 const BLOG_POSTS = [
     {
+        id: 3,
+        title: "Real Racing 3 Shutting Down: End of an Era & Alternatives",
+        category: "Tech",
+        shortDesc: "Real Racing 3 is shutting down on March 20, 2026. Here's why, and the top 4 alternatives including Grid Autosport and CarX Street.",
+        image: "assets/real_racing_shutdown.png",
+        content: `
+## Real Racing 3: The End of an Era
+
+Real Racing 3, a mobile game that has been on both Android and iOS devices for the past decade, is finally getting shut down on **March 20, 2026**.
+
+The game has already been taken down from App Stores and Play Stores.
+
+### Why is it shutting down?
+
+The reason for the cause being EA being EA and shutting down everything they touch. Also because of:
+
+*   **Expensive Licensing**: The licensing of all the real cars they use costs a lot.
+*   **Re-licensing Costs**: Renewing these licenses is expensive.
+*   **Freemium Model**: The game was a freemium version with microtransactions.
+*   **Developer Shutdown**: The original developer, **Firemonkeys Studios**, has been shut down.
+*   **Bugs**: The game has been controlled by another developer recently, which explains the bugs in the recent past.
+
+So, obviously, the millions of users who have been gaming this game, and including other casual gamers will be looking for alternative games that give the same immersive experience as this one.
+
+## Top 4 Alternatives to Real Racing 3
+
+Here is a list of alternatives that give the same immersive experience.
+
+### 1. Grid Autosport Custom Edition
+
+Number 1 on the list is **Grid Autosport Custom Edition**, which is a sandbox game just like Real Racing 3.
+*   It features haptic feedback.
+*   It is even more immersive in my opinion, and has higher difficulty.
+
+### 2. CarX Street
+
+Number 2 is **CarX Street**, a fully open-world game.
+*   It is just like Need for Speed console games, but more like GTA 5 as you can go out of bounds at times.
+*   The game is super fun and fully free.
+
+### 3. Need for Speed No Limits
+
+Number 3 is **Need for Speed No Limits**, another Firemonkeys x EA product.
+*   **Fate Unknown**: Probably gonna end up like Real Racing 3.
+*   **The Bad**: The game is loaded with microtransactions and ads (you will see an ad every race).
+*   **The Good**: The game is good, and you can purchase to make the ads disappear.
+*   **The Problem**: Races are too short, and the multiplayer is competitive.
+
+### 4. Grid Legends: Deluxe Edition
+
+Number 4 is **Grid Legends: Deluxe Edition**.
+        `,
+        date: "2026-01-30"
+    },
+    {
         id: 1,
         title: "How to Build Your Own Business Website Without Hiring a Developer",
         category: "Tech",
